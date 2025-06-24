@@ -1,0 +1,58 @@
+:root{
+    font-family: sans-serif;
+    --bg-primary: #eee;
+    --bg-secondary: #ddd;
+    --bg-accent: #bbd;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--bg-accent);
+}
+
+header h2 {
+    margin: 1rem;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.emoji {
+    font-size: 3rem;
+}
+
+.weather, .stories {
+    margin: 2rem auto;
+    max-width: 90%;
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather h2, .stories h2 {
+    background-color: var(--bg-accent);
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0;
+    text-align: center;
+}
+
+.weather p, .stories p {
+    margin: 2rem;
+}
+
+footer {
+    background-color: var(--bg-accent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
