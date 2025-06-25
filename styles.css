@@ -1,8 +1,16 @@
 :root{
     font-family: sans-serif;
-    --bg-primary: #eee;
-    --bg-secondary: #ddd;
-    --bg-accent: #bbd;
+    /* News Site Color Scheme (Red & Muted Tones) */
+    --bg-primary: #f5f5f5; /* Very light, soft gray for main content */
+    --bg-secondary: #e8e8e8; /* Slightly darker soft gray for sections or cards */
+    --bg-accent: #751f1f; /* A deep, less vibrant red for headers and key elements */
+
+    /* Additional Text & Border Colors for consistency */
+    --text-primary: #000000; /* Main text color (black) */
+    --text-secondary: #4a4a4a; /* Darker gray for less emphasized text */
+    --text-link: #a32b2b; /* Links will now be the accent red */
+    --text-link-hover: #7a2020; /* Darker red for link hover */
+    --border-light: #d0d0d0; /* Light gray for subtle borders */
 }
 
 body {
@@ -11,10 +19,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--bg-primary); /* Set body background from new variable */
+    color: var(--text-primary); /* Ensure body text is black */
 }
 
 header {
     background-color: var(--bg-accent);
+    color: white; /* Text on header should be white for contrast with red */
 }
 
 header h2 {
@@ -32,14 +43,16 @@ main {
 .weather, .stories {
     margin: 2rem auto;
     max-width: 90%;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-secondary); /* Uses the slightly darker soft gray */
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid var(--border-light); /* Added a subtle border for definition */
 }
 
 .weather h2, .stories h2 {
-    background-color: var(--bg-accent);
+    background-color: var(--bg-accent); /* Uses the deep red for section titles */
+    color: white; /* Text on these headers should be white */
     width: 100%;
     padding: 1rem 0;
     margin: 0;
@@ -51,8 +64,10 @@ main {
 }
 
 footer {
-    background-color: var(--bg-accent);
+    background-color: var(--bg-accent); /* Uses the deep red */
+    color: white; /* Text on footer should be white */
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem 0; /* Added padding for better appearance */
 }

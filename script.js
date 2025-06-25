@@ -24,6 +24,15 @@ const getDayOfYear = (date = new Date()) => {
   return dayOfYear;
 }
 
+const produceWeather = () => {
+    const date = getDayOfYear(today);
+    const weatherPattern = ['sunny', 'sunny', 'cloudy', 'rainy', 'sunny', 'cloudy', 'cloudy', 'sunny', 'rainy'];
+    const tempPattern = ['20', '18', '15', '8', '10', '12', '9', '14', '10'];
+    const weatherType = weatherPattern[date % weatherPattern.length];
+    const temperature = tempPattern[date % tempPattern.length];
+    displayWeather(weatherType, temperature);
+}
+
 const displayWeather = (weatherType, temperature) => {
     const type = document.createElement('p');
     const emoji = document.createElement('p');
@@ -56,5 +65,5 @@ async function collectStories() {
     displayStory(data);
 }
 
-displayWeather('sunny', 20);
+produceWeather();
 collectStories();
