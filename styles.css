@@ -1,73 +1,91 @@
-:root{
-    font-family: sans-serif;
-    /* News Site Color Scheme (Red & Muted Tones) */
-    --bg-primary: #f5f5f5; /* Very light, soft gray for main content */
-    --bg-secondary: #e8e8e8; /* Slightly darker soft gray for sections or cards */
-    --bg-accent: #751f1f; /* A deep, less vibrant red for headers and key elements */
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    /* Additional Text & Border Colors for consistency */
-    --text-primary: #000000; /* Main text color (black) */
-    --text-secondary: #4a4a4a; /* Darker gray for less emphasized text */
-    --text-link: #a32b2b; /* Links will now be the accent red */
-    --text-link-hover: #7a2020; /* Darker red for link hover */
-    --border-light: #d0d0d0; /* Light gray for subtle borders */
+    /* News Site Color Scheme */
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #e8e8e8;
+    --bg-accent: #773434;
+
+    --text-primary: #000000;
+    --text-secondary: #4a4a4a;
+    --text-link: #a32b2b;
+    --text-link-hover: #7a2020;
+    --border-light: #cccccc;
 }
 
 body {
-    padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--bg-primary); /* Set body background from new variable */
-    color: var(--text-primary); /* Ensure body text is black */
+    padding: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
 }
 
 header {
     background-color: var(--bg-accent);
-    color: white; /* Text on header should be white for contrast with red */
+    color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h2 {
-    margin: 1rem;
+    margin: 0;
+    font-size: 2rem;
 }
 
 main {
     flex-grow: 1;
-}
-
-.emoji {
-    font-size: 3rem;
+    padding: 2rem 1rem;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .weather, .stories {
-    margin: 2rem auto;
-    max-width: 90%;
-    background-color: var(--bg-secondary); /* Uses the slightly darker soft gray */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid var(--border-light); /* Added a subtle border for definition */
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .weather h2, .stories h2 {
-    background-color: var(--bg-accent); /* Uses the deep red for section titles */
-    color: white; /* Text on these headers should be white */
-    width: 100%;
-    padding: 1rem 0;
+    background-color: var(--bg-accent);
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 1rem;
     margin: 0;
-    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.weather h3, .stories h3 {
+    margin: 1rem;
 }
 
 .weather p, .stories p {
-    margin: 2rem;
+    padding: 1rem 1.5rem;
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--text-link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-link-hover);
+    text-decoration: underline;
 }
 
 footer {
-    background-color: var(--bg-accent); /* Uses the deep red */
-    color: white; /* Text on footer should be white */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0; /* Added padding for better appearance */
+    background-color: var(--bg-accent);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.emoji {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
